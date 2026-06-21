@@ -3,7 +3,8 @@ def greet(name):
     return f"Hello, {name}"
 
 def calculate(a, b):
-    # TODO: this function crashes if b is 0
+    if b == 0:
+        raise ValueError("Cannot divide by zero: 'b' must be non-zero.")
     return a / b
 
 if __name__ == "__main__":
